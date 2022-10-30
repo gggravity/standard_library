@@ -4,3 +4,4 @@ project(standard_libery)
 set(CMAKE_CXX_STANDARD 23)
 
 add_executable(lambda1 lang/lambda1.cpp)
+add_executable(exception_test exception_test.cpp)
