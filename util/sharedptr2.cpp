@@ -6,8 +6,6 @@
 
 #include <bits/stdc++.h>
 
-#include <utility>
-
 using namespace std;
 
 class File_deleter
