@@ -21,7 +21,7 @@ struct Person : enable_shared_from_this<Person>
       cout << "delete " << name << endl;
     }
 
-    void set_parents_And_their_kids (const shared_ptr<Person>& m = nullptr,
+    void set_parents_and_their_kids (const shared_ptr<Person>& m = nullptr,
                                      const shared_ptr<Person>& f = nullptr)
     {
       mother = m;
@@ -50,7 +50,7 @@ auto init_family (const string &name)
   auto mom { make_shared<Person>(name + "'s mom") };
   auto dad { make_shared<Person>(name + "'s dad") };
   auto kid { make_shared<Person>(name) };
-  kid->set_parents_And_their_kids(mom, dad);
+  kid->set_parents_and_their_kids(mom, dad);
 
   return kid;
 }
