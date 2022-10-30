@@ -28,7 +28,7 @@ int main ()
   get<1>(t1) = get<1>(t2);
 
   print_tuple_3(t1);
-  
+
 
   if (t1 < t2)
     {
