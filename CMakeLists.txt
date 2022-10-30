@@ -5,3 +5,4 @@ set(CMAKE_CXX_STANDARD 23)
 
 add_executable(lambda1 lang/lambda1.cpp)
 add_executable(exception_test exception_test.cpp)
+add_executable(pair1 util/pair1.cpp)
