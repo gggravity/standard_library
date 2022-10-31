@@ -19,7 +19,7 @@ int main ()
     }
 
   cout << fixed << setprecision(2);
-  
+
   for (const auto &elem : coll)
     {
       cout << setw(12) << left << elem.first + ": " << elem.second << endl;
