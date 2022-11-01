@@ -19,7 +19,14 @@ void print (Collection collection, const string &prefix)
 
 int main ()
 {
-  vector<int> collection { 2, 5, 4, 1, 6, 3 };
+  vector<int> collection;
+  collection.push_back(2);
+  collection.push_back(5);
+  collection.push_back(4);
+  collection.push_back(1);
+  collection.push_back(6);
+  collection.push_back(3);
+
   print(collection, "original");
 
   auto min_pos { min_element(collection.cbegin(), collection.cend()) };
