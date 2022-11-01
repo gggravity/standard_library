@@ -1,20 +1,15 @@
-//
-// Created by martin on 11/1/22.
-//
-
-#include <bits/stdc++.h>
+#include <string>
+#include <iostream>
 
 #define PRINT_ELEMENTS(varname) print_elements(varname, #varname)
 
-using namespace std;
-
 template < typename Collection >
-void print_elements (Collection collection, const string &prefix)
+void print_elements (Collection collection, const std::string &prefix)
 {
-  cout << prefix << ": ";
+  std::cout << prefix << ": ";
   for (auto elem : collection)
     {
-      cout << elem << ' ';
+      std::cout << elem << ' ';
     }
-  cout << endl;
+  std::cout << std::endl;
 }
