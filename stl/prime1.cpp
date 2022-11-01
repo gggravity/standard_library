@@ -39,26 +39,16 @@ int main ()
   if (pos != collection.cend())
     {
       cout << *pos << " is first prime number found" << endl;
-    }
-  else
-    {
-      cout << "no prime number found" << endl;
-    }
 
-  auto ptr { find_if(collection.cbegin(), collection.cend(), is_prime) };
-
-  if (ptr == collection.cend())
-    {
-      cout << "no prime number found" << endl;
-    }
-  else
-    {
       cout << "prime number(s): ";
-      while (ptr != collection.cend())
+      while (pos != collection.cend())
         {
-          cout << *ptr << " ";
-          ptr = find_if(++ptr, collection.cend(), is_prime);
+          cout << *pos << " ";
+          pos = find_if(++pos, collection.cend(), is_prime);
         }
     }
-
+  else
+    {
+      cout << "no prime number found" << endl;
+    }
 }
