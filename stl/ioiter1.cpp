@@ -7,7 +7,7 @@ using namespace std;
 
 int main ()
 {
-  istringstream iss {"der var en gang en mand"};
+  istringstream iss {"der var en gang en mand der var en gang en mand"};
 
   vector<string> coll;
 
