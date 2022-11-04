@@ -16,3 +16,16 @@ void print_elements (Collection collection, const std::string &prefix)
     }
   std::cout << std::endl;
 }
+
+#define PRINT_MAP(varname) print_map(varname, #varname)
+
+template < typename Collection >
+void print_map (Collection collection, const std::string &prefix)
+{
+  std::cout << terminal_colors::green(prefix + ": ");
+  for (auto [key, value] : collection)
+    {
+      std::cout << "{ " << key << ", " << value << " }" << ' ';
+    }
+  std::cout << std::endl;
+}
