@@ -12,9 +12,9 @@ int main ()
 {
   map<string, float> collection;
 
-  collection.insert({ "AAA", 111 });
-  collection.insert({ "BBB", 222 });
-  collection.insert({ "CCC", 333 });
+  collection.emplace("AAA", 111);
+  collection.emplace("BBB", 222);
+  collection.emplace("CCC", 333);
 
   PRINT_MAP(collection);
 
