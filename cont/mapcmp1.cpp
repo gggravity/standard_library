@@ -51,7 +51,7 @@ void fill_and_print (String_string_map &collection)
   collection["Hund"] = "dog";
   collection["gehen"] = "go";
   collection["Unternehmen"] = "enterprise";
-  collection["Unternehmen"] = "undertaker";
+  collection["unternehmen"] = "undertaker";
   collection["gehen"] = "walk";
   collection["Bestatter"] = "undertaker";
 
