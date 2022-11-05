@@ -18,6 +18,8 @@ int main ()
   iter++;
   *iter = 3;
 
+  PRINT_ELEMENTS(collection);
+
   associative_inserter(collection) = 44;
   associative_inserter(collection) = 55;
 
