@@ -93,5 +93,4 @@ int main ()
 
   print_items("bestsellers:", bestsellers);
   print_items("all-items:", all_items);
-
 }
