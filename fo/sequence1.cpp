@@ -29,9 +29,11 @@ int main ()
 {
   list<int> coll;
 
-  generate_n(back_inserter(coll), 9, Int_sequence(1));
+  generate_n(back_inserter(coll), 9,
+             Int_sequence(1));
   PRINT_ELEMENTS(coll);
 
-  generate(next(coll.begin()), prev(coll.end()), Int_sequence(42));
+  generate(next(coll.begin()), prev(coll.end()),
+           Int_sequence(42));
   PRINT_ELEMENTS(coll);
 }
