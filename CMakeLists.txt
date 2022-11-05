@@ -1,6 +1,8 @@
 cmake_minimum_required(VERSION 3.23)
 project(standard_libery)
 
+#set(CMAKE_WARN_DEPRECATED OFF)
+
 set(CMAKE_CXX_STANDARD 23)
 
 add_executable(lambda1 lang/lambda1.cpp)
@@ -99,3 +101,4 @@ add_executable(inserter1 iter/inserter1.cpp)
 add_executable(ostreamiter1 iter/ostreamiter1.cpp)
 add_executable(istreamiter1 iter/istreamiter1.cpp)
 add_executable(advance2 iter/advance2.cpp)
+add_executable(assoiter1 iter/assoiter1.cpp)
