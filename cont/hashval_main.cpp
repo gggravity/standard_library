@@ -21,7 +21,7 @@ struct Customer
 
     bool operator== (const Customer &customer) const
     {
-      return customer.first_name < customer.last_name;
+      return customer.first_name == customer.last_name;
     }
 
     friend ostream &operator<< (ostream &os, const Customer &customer)
