@@ -27,12 +27,18 @@ struct Int_sequence
 int main ()
 {
   list<int> coll;
+  Int_sequence sequence(1);
 
-  generate_n(back_inserter(coll), 9,
-             Int_sequence(1));
+  generate_n<back_insert_iterator<list<int>>, int, Int_sequence &>
+      (back_inserter(coll), 4, sequence);
   PRINT_ELEMENTS(coll);
 
-  generate(next(coll.begin()), prev(coll.end()),
-           Int_sequence(42));
+  generate_n(back_inserter(coll), 4, Int_sequence(42));
+  PRINT_ELEMENTS(coll);
+
+  generate_n(back_inserter(coll), 4, sequence);
+  PRINT_ELEMENTS(coll);
+
+  generate_n(back_inserter(coll), 4, sequence);
   PRINT_ELEMENTS(coll);
 }
