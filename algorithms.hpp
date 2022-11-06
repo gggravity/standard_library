@@ -83,12 +83,14 @@ auto lexicographical_compare (const T &container1, const U &container2, const P 
 
 //is_sorted
 template < typename T >
+// Returns true if the container is sorted into ascending order.
 auto is_sorted (const T &container)
 {
   return std::is_sorted(container.cbegin(), container.cend());
 }
 
 template < typename T, typename P >
+// Returns true if the container is sorted into ascending order.
 auto is_sorted (const T &container, const P &predicate)
 {
   return std::is_sorted(container.cbegin(), container.cend(), predicate);
@@ -97,12 +99,14 @@ auto is_sorted (const T &container, const P &predicate)
 // is_sorted_until
 template < typename T >
 auto is_sorted_until (const T &container)
+// Returns an iterator to the first element in the container which does not follow an ascending order.
 {
   return std::is_sorted_until(container.cbegin(), container.cend());
 }
 
 template < typename T, typename P >
 auto is_sorted_until (const T &container, const P &predicate)
+// Returns an iterator to the first element in the container which does not follow an ascending order.
 {
   return std::is_sorted_until(container.cbegin(), container.cend(), predicate);
 }
