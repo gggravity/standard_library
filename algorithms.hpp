@@ -235,3 +235,10 @@ auto transform (const T1 &source, T2 destination, const P &predicate)
   return std::transform(source.begin(), source.end(),
                         destination, predicate);
 }
+
+// fill
+template < typename T, typename U>
+auto fill (T &container, const U& value)
+{
+  return std::fill(container.begin(), container.end(), value);
+}
