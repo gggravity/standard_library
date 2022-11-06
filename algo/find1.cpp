@@ -28,8 +28,7 @@ int main ()
 
   if (pos1 != collection.cend() && pos2 != collection.end())
     {
-      copy(--pos1, ++pos2,
-           ostream_iterator<int>(cout, " "));
+      copy(--pos1, ++pos2, ostream_iterator<int>(cout, " "));
       cout << endl;
     }
 }
