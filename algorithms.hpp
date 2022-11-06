@@ -249,3 +249,10 @@ auto generate (T &container, const U& value)
 {
   return std::generate(container.begin(), container.end(), value);
 }
+
+// iota
+template < typename T, typename U>
+auto iota (T &container, const U& value)
+{
+  return std::iota(container.begin(), container.end(), value);
+}
