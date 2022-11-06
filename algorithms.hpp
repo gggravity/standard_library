@@ -6,11 +6,25 @@
 
 #include <algorithm>
 
-template < typename Container1, typename Container2 >
-// requires Container<C>()
-void copy (Container1 &from_container, Container2 &to_container)
+//template < typename Container1, typename Container2 >
+//// requires Container<Container1>()
+//void copy (Container1 &from_container, Container2 &to_container)
+//{
+//  std::copy(from_container.begin(), from_container.end(), to_container.begin());
+//}
+
+template < typename Container, typename U >
+// requires Container<Container>()
+void copy (Container &source, U destination)
 {
-  std::copy(from_container.begin(), from_container.end(), to_container.begin());
+  std::copy(source.begin(), source.end(), destination);
+}
+
+template < typename Container1, typename Container2, typename Predicate >
+// requires Container<C>()
+void copy (Container1 &from_container, Container2 &to_container, Predicate predicate)
+{
+  std::copy(from_container.begin(), from_container.end(), to_container.begin(), predicate);
 }
 
 template < typename Container >
@@ -174,7 +188,7 @@ template < typename T, typename P >
 */
 auto is_heap_until (const T &container, const P &predicate)
 {
- return std::is_heap_until(container.cbegin(), container.cend(), predicate);
+  return std::is_heap_until(container.cbegin(), container.cend(), predicate);
 }
 
 // all_of
