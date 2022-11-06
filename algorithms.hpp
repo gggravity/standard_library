@@ -80,3 +80,29 @@ auto lexicographical_compare (const T &container1, const U &container2, const P 
 {
   return std::lexicographical_compare(container1.cbegin(), container1.cend(), container2.cbegin(), predicate);
 }
+
+//is_sorted
+template < typename T >
+auto is_sorted (const T &container)
+{
+  return std::is_sorted(container.cbegin(), container.cend());
+}
+
+template < typename T, typename P >
+auto is_sorted (const T &container, const P &predicate)
+{
+  return std::is_sorted(container.cbegin(), container.cend(), predicate);
+}
+
+// is_sorted_until
+template < typename T >
+auto is_sorted_until (const T &container)
+{
+  return std::is_sorted_until(container.cbegin(), container.cend());
+}
+
+template < typename T, typename P >
+auto is_sorted_until (const T &container, const P &predicate)
+{
+  return std::is_sorted_until(container.cbegin(), container.cend(), predicate);
+}
