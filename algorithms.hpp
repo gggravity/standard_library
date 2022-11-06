@@ -110,3 +110,29 @@ auto is_sorted_until (const T &container, const P &predicate)
 {
   return std::is_sorted_until(container.cbegin(), container.cend(), predicate);
 }
+
+// is_partitioned
+template < typename T >
+auto is_partitioned (const T &container)
+{
+  return std::is_partitioned(container.cbegin(), container.cend());
+}
+
+template < typename T, typename P >
+auto is_partitioned (const T &container, const P &predicate)
+{
+  return std::is_partitioned(container.cbegin(), container.cend(), predicate);
+}
+
+// partition_point
+template < typename T >
+auto partition_point (const T &container)
+{
+  return std::partition_point(container.cbegin(), container.cend());
+}
+
+template < typename T, typename P >
+auto partition_point (const T &container, const P &predicate)
+{
+  return std::partition_point(container.cbegin(), container.cend(), predicate);
+}
