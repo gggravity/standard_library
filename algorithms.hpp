@@ -113,12 +113,14 @@ auto is_sorted_until (const T &container, const P &predicate)
 
 // is_partitioned
 template < typename T >
+// Checks whether the sequence is partitioned.
 auto is_partitioned (const T &container)
 {
   return std::is_partitioned(container.cbegin(), container.cend());
 }
 
 template < typename T, typename P >
+// Checks whether the sequence is partitioned.
 auto is_partitioned (const T &container, const P &predicate)
 {
   return std::is_partitioned(container.cbegin(), container.cend(), predicate);
@@ -126,12 +128,14 @@ auto is_partitioned (const T &container, const P &predicate)
 
 // partition_point
 template < typename T >
+// Find the partition point of a partitioned range.
 auto partition_point (const T &container)
 {
   return std::partition_point(container.cbegin(), container.cend());
 }
 
 template < typename T, typename P >
+// Find the partition point of a partitioned range.
 auto partition_point (const T &container, const P &predicate)
 {
   return std::partition_point(container.cbegin(), container.cend(), predicate);
