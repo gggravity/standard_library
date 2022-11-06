@@ -176,3 +176,24 @@ auto is_heap_until (const T &container, const P &predicate)
 {
  return std::is_heap_until(container.cbegin(), container.cend(), predicate);
 }
+
+// all_of
+template < typename T, typename P >
+auto all_of (const T &container, const P &predicate)
+{
+  return std::all_of(container.cbegin(), container.cend(), predicate);
+}
+
+// any_of
+template < typename T, typename P >
+auto any_of (const T &container, const P &predicate)
+{
+  return std::any_of(container.cbegin(), container.cend(), predicate);
+}
+
+// none_of
+template < typename T, typename P >
+auto none_of (const T &container, const P &predicate)
+{
+  return std::none_of(container.cbegin(), container.cend(), predicate);
+}

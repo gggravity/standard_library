@@ -29,5 +29,4 @@ int main ()
     {
       cout << "first non-heap element: " << *pos << endl;
     }
-
 }
