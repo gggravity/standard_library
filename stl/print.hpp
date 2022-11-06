@@ -1,5 +1,6 @@
 #include <string>
 #include <iostream>
+#include <iomanip>
 #include "/home/martin/src/terminal_colors/terminal_colors.h"
 
 #define DUMP(varname) (cout << terminal_colors::blue(string(#varname) + ": ") << varname << endl)

@@ -3,6 +3,9 @@ project(standard_libery)
 
 #set(CMAKE_WARN_DEPRECATED OFF)
 
+#set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -stdlib=libc++ -v")
+#set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -stdlib=libc++ -lc++abi")
+
 set(CMAKE_CXX_STANDARD 23)
 
 add_executable(lambda1 lang/lambda1.cpp)
