@@ -140,3 +140,39 @@ auto partition_point (const T &container, const P &predicate)
 {
   return std::partition_point(container.cbegin(), container.cend(), predicate);
 }
+
+// is_heap
+template < typename T >
+// Determines whether a range is a heap (Maximum element first).
+auto is_heap (const T &container)
+{
+  return std::is_heap(container.cbegin(), container.cend());
+}
+
+template < typename T, typename P >
+// Determines whether a range is a heap (Maximum element first) using comparison functor.
+auto is_heap (const T &container, const P &predicate)
+{
+  return std::is_heap(container.cbegin(), container.cend(), predicate);
+}
+
+// is_heap_until
+template < typename T >
+/**
+* Search the end of a heap.
+* @return  An iterator pointing to the first element not in the heap.
+*/
+auto is_heap_until (const T &container)
+{
+  return std::is_heap_until(container.cbegin(), container.cend());
+}
+
+template < typename T, typename P >
+/***
+* Search the end of a heap using comparison functor.
+* @return  An iterator pointing to the first element not in the heap.
+*/
+auto is_heap_until (const T &container, const P &predicate)
+{
+ return std::is_heap_until(container.cbegin(), container.cend(), predicate);
+}
