@@ -218,3 +218,20 @@ auto none_of (const T &container, const P &predicate)
 {
   return std::none_of(container.cbegin(), container.cend(), predicate);
 }
+
+// transform
+template < typename T, typename P >
+auto transform (const T &source, T &destination, const P &predicate)
+{
+  typename T::iterator output = std::transform(source.begin(), source.end(),
+                        destination.begin(), predicate);
+
+  return output;
+}
+
+template < typename T1, typename T2, typename P >
+auto transform (const T1 &source, T2 destination, const P &predicate)
+{
+  return std::transform(source.begin(), source.end(),
+                        destination, predicate);
+}
