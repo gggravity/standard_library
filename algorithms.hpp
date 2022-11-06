@@ -242,3 +242,10 @@ auto fill (T &container, const U& value)
 {
   return std::fill(container.begin(), container.end(), value);
 }
+
+// generate
+template < typename T, typename U>
+auto generate (T &container, const U& value)
+{
+  return std::generate(container.begin(), container.end(), value);
+}
