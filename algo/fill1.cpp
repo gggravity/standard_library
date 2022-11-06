@@ -20,4 +20,13 @@ int main ()
 
   fill(coll, "again");
   PRINT_ELEMENTS(coll);
+
+  fill_n(coll.begin(), coll.size() - 2, "hi");
+  PRINT_ELEMENTS(coll);
+
+  auto pos1 {coll.begin()};
+  auto pos2 {coll.end()};
+
+  fill (++pos1, --pos2, "hmmm");
+  PRINT_ELEMENTS(coll);
 }
