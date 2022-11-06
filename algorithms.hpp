@@ -6,6 +6,13 @@
 
 #include <algorithm>
 
+template < typename Container, typename U >
+// requires Container<Container>()
+void move (Container &source, U destination)
+{
+  std::move(source.begin(), source.end(), destination);
+}
+
 //template < typename Container1, typename Container2 >
 //// requires Container<Container1>()
 //void copy (Container1 &from_container, Container2 &to_container)
