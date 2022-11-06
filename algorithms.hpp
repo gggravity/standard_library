@@ -52,3 +52,15 @@ auto is_permutation (const T &container1, const U &container2, const P &predicat
 {
   return std::is_permutation(container1.cbegin(), container1.cend(), container2.cbegin(), predicate);
 }
+
+template < typename T, typename U >
+auto mismatch (const T &container1, const U &container2)
+{
+  return std::mismatch(container1.cbegin(), container1.cend(), container2.cbegin());
+}
+
+template < typename T, typename U, typename P >
+auto mismatch (const T &container1, const U &container2, const P &predicate)
+{
+  return std::mismatch(container1.cbegin(), container1.cend(), container2.cbegin(), predicate);
+}
