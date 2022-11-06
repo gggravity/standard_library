@@ -7,18 +7,6 @@
 
 using namespace std;
 
-bool check_even (int element, bool even)
-{
-  if (even)
-    {
-      return element % 2 == false;
-    }
-  else
-    {
-      return element % 2 == true;
-    }
-};
-
 int main ()
 {
   deque<int> coll;
