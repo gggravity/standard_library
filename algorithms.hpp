@@ -41,6 +41,7 @@ auto find_if (Container &c, Predicate predicate)
   return std::find_if(c.begin(), c.end(), predicate);
 }
 
+// is_permutation
 template < typename T, typename U >
 auto is_permutation (const T &container1, const U &container2)
 {
@@ -53,6 +54,7 @@ auto is_permutation (const T &container1, const U &container2, const P &predicat
   return std::is_permutation(container1.cbegin(), container1.cend(), container2.cbegin(), predicate);
 }
 
+// mismatch
 template < typename T, typename U >
 auto mismatch (const T &container1, const U &container2)
 {
@@ -63,4 +65,18 @@ template < typename T, typename U, typename P >
 auto mismatch (const T &container1, const U &container2, const P &predicate)
 {
   return std::mismatch(container1.cbegin(), container1.cend(), container2.cbegin(), predicate);
+}
+
+//lexicographical_compare
+template < typename T, typename U >
+auto lexicographical_compare (const T &container1, const U &container2)
+{
+  return std::lexicographical_compare(container1.cbegin(), container1.cend(),
+                                      container2.cbegin(), container2.cend());
+}
+
+template < typename T, typename U, typename P >
+auto lexicographical_compare (const T &container1, const U &container2, const P &predicate)
+{
+  return std::lexicographical_compare(container1.cbegin(), container1.cend(), container2.cbegin(), predicate);
 }
