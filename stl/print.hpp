@@ -12,7 +12,7 @@ void print_elements (Collection collection, const std::string &prefix)
   std::cout << terminal_colors::green(prefix + ": ");
   for (auto elem : collection)
     {
-      std::cout << elem << ' ';
+      std::cout << std::setw(2) << elem << ' ';
     }
   std::cout << std::endl;
 }
