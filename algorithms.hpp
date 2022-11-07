@@ -332,5 +332,20 @@ auto rotate (T &container, const U &iter)
 template < typename T, typename U, typename O >
 auto rotate_copy (T &container, const U &iter, O output_iterator)
 {
-  return std::rotate_copy(container.begin(), iter, container.end(), output_iterator);
+  return std::rotate_copy(container.begin(), iter,
+                          container.end(), output_iterator);
+}
+
+// next_permutation
+template < typename T >
+auto next_permutation (T &container)
+{
+  return std::next_permutation(container.begin(), container.end());
+}
+
+// prev_permutation
+template < typename T >
+auto prev_permutation (T &container)
+{
+  return std::prev_permutation(container.begin(), container.end());
 }
