@@ -29,16 +29,23 @@ int main ()
 //         coll.end());
 //  print_elements(coll , "four first     ");
 
-  vector<int> coll;
+  set<int> coll;
   INSERT_ELEMENTS(coll, 1, 9);
-  print_elements(coll, "coll           ");
 
-  rotate(coll, coll.begin() + 1);
-  print_elements(coll, "one left       ");
+  copy(coll, ostream_iterator<int>(cout, " "));
+  cout << endl;
 
-  rotate(coll, coll.end() - 2);
-  print_elements(coll, "two right      ");
+  rotate_copy(coll, next(coll.cbegin()),
+              ostream_iterator<int>(cout, " "));
+  cout << endl;
 
-  rotate(coll, find(coll, 4));
-  print_elements(coll, "four first     ");
+  auto pos = coll.cend();
+  advance(pos, -2);
+  rotate_copy(coll, pos,
+              ostream_iterator<int>(cout, " "));
+  cout << endl;
+
+  rotate_copy(coll, coll.find(4),
+              ostream_iterator<int>(cout, " "));
+  cout << endl;
 }

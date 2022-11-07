@@ -322,8 +322,15 @@ auto reverse (T &container)
 }
 
 // rotate
-template < typename T, typename U>
-auto rotate (T &container,  const U &iter)
+template < typename T, typename U >
+auto rotate (T &container, const U &iter)
 {
   return std::rotate(container.begin(), iter, container.end());
+}
+
+// rotate_copy
+template < typename T, typename U, typename O >
+auto rotate_copy (T &container, const U &iter, O output_iterator)
+{
+  return std::rotate_copy(container.begin(), iter, container.end(), output_iterator);
 }
