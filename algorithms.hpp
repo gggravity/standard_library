@@ -349,3 +349,11 @@ auto prev_permutation (T &container)
 {
   return std::prev_permutation(container.begin(), container.end());
 }
+
+// shuffle
+template < typename T>
+auto shuffle (T &container)
+{
+  auto seed = std::chrono::system_clock::now().time_since_epoch().count();
+  return std::shuffle(container.begin(), container.end(), std::default_random_engine(seed));
+}
