@@ -224,7 +224,7 @@ template < typename T, typename P >
 auto transform (const T &source, T &destination, const P &predicate)
 {
   typename T::iterator output = std::transform(source.begin(), source.end(),
-                        destination.begin(), predicate);
+                                               destination.begin(), predicate);
 
   return output;
 }
@@ -237,36 +237,52 @@ auto transform (const T1 &source, T2 destination, const P &predicate)
 }
 
 // fill
-template < typename T, typename U>
-auto fill (T &container, const U& value)
+template < typename T, typename U >
+auto fill (T &container, const U &value)
 {
   return std::fill(container.begin(), container.end(), value);
 }
 
 // generate
-template < typename T, typename U>
-auto generate (T &container, const U& value)
+template < typename T, typename U >
+auto generate (T &container, const U &value)
 {
   return std::generate(container.begin(), container.end(), value);
 }
 
 // iota
-template < typename T, typename U>
-auto iota (T &container, const U& value)
+template < typename T, typename U >
+auto iota (T &container, const U &value)
 {
   return std::iota(container.begin(), container.end(), value);
 }
 
 // replace
-template < typename T, typename U>
-auto replace (T &container, const U& from, const U& to)
+template < typename T, typename U >
+auto replace (T &container, const U &from, const U &to)
 {
   return std::replace(container.begin(), container.end(), from, to);
 }
 
 // replace_if
-template < typename T, typename P, typename U>
-auto replace_if (T &container, const P& predicate, const U& to)
+template < typename T, typename P, typename U >
+auto replace_if (T &container, const P &predicate, const U &to)
 {
   return std::replace_if(container.begin(), container.end(), predicate, to);
+}
+
+// replace_copy
+template < typename T1, typename Iter, typename U >
+auto replace_copy (T1 &container1, Iter iter, const U &from, const U &to)
+{
+  return std::replace_copy(container1.begin(), container1.end(),
+                           iter, from, to);
+}
+
+// replace_copy_if
+template < typename T1, typename Iter, typename P, typename U >
+auto replace_copy_if (T1 &container1, Iter iter, const P &predicate, const U &to)
+{
+  return std::replace_copy_if(container1.begin(), container1.end(),
+                              iter, predicate, to);
 }
