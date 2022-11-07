@@ -256,3 +256,17 @@ auto iota (T &container, const U& value)
 {
   return std::iota(container.begin(), container.end(), value);
 }
+
+// replace
+template < typename T, typename U>
+auto replace (T &container, const U& from, const U& to)
+{
+  return std::replace(container.begin(), container.end(), from, to);
+}
+
+// replace_if
+template < typename T, typename P, typename U>
+auto replace_if (T &container, const P& predicate, const U& to)
+{
+  return std::replace_if(container.begin(), container.end(), predicate, to);
+}
