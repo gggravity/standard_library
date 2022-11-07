@@ -373,3 +373,12 @@ auto stable_partition (T &container, const P &predicate)
 
   return std::stable_partition(container.begin(), container.end(), predicate);
 }
+
+// partition_copy
+template < typename T, typename I1, typename I2, typename P >
+auto partition_copy (const T &container, I1 out_true, I2 out_false, const P &predicate)
+{
+
+  return std::partition_copy(container.begin(), container.end(),
+                             out_true, out_false, predicate);
+}
