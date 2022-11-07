@@ -351,9 +351,25 @@ auto prev_permutation (T &container)
 }
 
 // shuffle
-template < typename T>
+template < typename T >
 auto shuffle (T &container)
 {
   auto seed = std::chrono::system_clock::now().time_since_epoch().count();
   return std::shuffle(container.begin(), container.end(), std::default_random_engine(seed));
+}
+
+// partition
+template < typename T, typename P >
+auto partition (T &container, const P &predicate)
+{
+
+  return std::partition(container.begin(), container.end(), predicate);
+}
+
+// stable_partition
+template < typename T, typename P >
+auto stable_partition (T &container, const P &predicate)
+{
+
+  return std::stable_partition(container.begin(), container.end(), predicate);
 }
