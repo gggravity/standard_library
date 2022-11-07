@@ -34,11 +34,27 @@ void copy (Container1 &from_container, Container2 &to_container, Predicate predi
   std::copy(from_container.begin(), from_container.end(), to_container.begin(), predicate);
 }
 
+// sort
 template < typename Container >
 // requires Container<C>()
 void sort (Container &c)
 {
   std::sort(c.begin(), c.end());
+}
+
+// stable_sort
+template < typename Container >
+// requires Container<C>()
+void stable_sort (Container &c)
+{
+  std::stable_sort(c.begin(), c.end());
+}
+
+template < typename Container, typename Predicate >
+// requires Container<C>()
+void stable_sort (Container &c, const Predicate &predicate)
+{
+  std::stable_sort(c.begin(), c.end(), predicate);
 }
 
 template < typename Container, typename Predicate >
