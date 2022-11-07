@@ -33,5 +33,4 @@ int main ()
                       return element % 2 == true;
                   }, 0);
   cout << endl;
-
 }

@@ -286,3 +286,17 @@ auto replace_copy_if (T1 &container1, Iter iter, const P &predicate, const U &to
   return std::replace_copy_if(container1.begin(), container1.end(),
                               iter, predicate, to);
 }
+
+// remove
+template < typename T, typename U >
+auto remove (T &container, const U &value)
+{
+  return std::remove(container.begin(), container.end(), value);
+}
+
+// remove_if
+template < typename T, typename U >
+auto remove_if (T &container, const U &predicate)
+{
+  return std::remove_if(container.begin(), container.end(), predicate);
+}
