@@ -25,7 +25,7 @@ int main ()
   PRINT_ELEMENTS(coll);
 
   My_random rd;
-  // random_shuffle is depreciated
+  // random_shuffle is deprecated
   random_shuffle(coll.begin(), coll.end(), rd);
   PRINT_ELEMENTS(coll);
 }
