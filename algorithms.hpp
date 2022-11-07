@@ -320,3 +320,10 @@ auto reverse (T &container)
 {
   return std::reverse(container.begin(), container.end());
 }
+
+// rotate
+template < typename T, typename U>
+auto rotate (T &container,  const U &iter)
+{
+  return std::rotate(container.begin(), iter, container.end());
+}
