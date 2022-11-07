@@ -398,3 +398,17 @@ auto partition_copy (const T &container, I1 out_true, I2 out_false, const P &pre
   return std::partition_copy(container.begin(), container.end(),
                              out_true, out_false, predicate);
 }
+
+// partial_sort
+template < typename T, typename U >
+auto partial_sort (T &container, const U &sort_end)
+{
+  return std::partial_sort(container.begin(), sort_end, container.end());
+}
+
+template < typename T, typename U, typename P >
+auto partial_sort (T &container, const U &sort_end, const P &predicate)
+{
+  return std::partial_sort(container.begin(), sort_end, container.end(),
+                           predicate);
+}
