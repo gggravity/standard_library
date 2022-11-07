@@ -313,3 +313,10 @@ auto unique (T &container, const U &predicate)
 {
   return std::unique(container.begin(), container.end(), predicate);
 }
+
+// reverse
+template < typename T >
+auto reverse (T &container)
+{
+  return std::reverse(container.begin(), container.end());
+}
