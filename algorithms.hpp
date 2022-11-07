@@ -300,3 +300,16 @@ auto remove_if (T &container, const U &predicate)
 {
   return std::remove_if(container.begin(), container.end(), predicate);
 }
+
+// unique
+template < typename T >
+auto unique (T &container)
+{
+  return std::unique(container.begin(), container.end());
+}
+
+template < typename T, typename U >
+auto unique (T &container, const U &predicate)
+{
+  return std::unique(container.begin(), container.end(), predicate);
+}
