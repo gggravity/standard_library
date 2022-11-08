@@ -412,3 +412,19 @@ auto partial_sort (T &container, const U &sort_end, const P &predicate)
   return std::partial_sort(container.begin(), sort_end, container.end(),
                            predicate);
 }
+
+// partial_sort_copy
+template < typename T1, typename T2 >
+auto partial_sort_copy (const T1 &from, T2 &to)
+{
+  return std::partial_sort_copy(from.cbegin(), from.cend(),
+                                to.begin(), to.end());
+}
+
+template < typename T1, typename T2, typename P >
+auto partial_sort_copy (const T1 &from, T2 &to, const P &predicate)
+{
+  return std::partial_sort_copy(from.cbegin(), from.cend(),
+                                to.begin(), to.end(),
+                                predicate);
+}
