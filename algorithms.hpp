@@ -477,3 +477,11 @@ auto binary_search (Container &container, const T&value)
 {
   return std::binary_search(container.begin(), container.end(), value);
 }
+
+// includes
+template < typename Container1, typename Container2>
+auto includes (const Container1 &container1, const Container2 &container2)
+{
+  return std::includes(container1.cbegin(), container1.cend(),
+                       container2.cbegin(), container2.cend());
+}
