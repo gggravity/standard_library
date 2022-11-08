@@ -428,3 +428,17 @@ auto partial_sort_copy (const T1 &from, T2 &to, const P &predicate)
                                 to.begin(), to.end(),
                                 predicate);
 }
+
+// nth_element
+template < typename T, typename U >
+auto nth_element (T &container, const U &nth_element)
+{
+  return std::nth_element(container.begin(), nth_element, container.end());
+}
+
+template < typename T, typename U, typename P >
+auto nth_element (T &container, const U &nth_element, const P &predicate)
+{
+  return std::nth_element(container.begin(), nth_element, container.end(),
+                          predicate);
+}
