@@ -470,3 +470,10 @@ auto sort_heap (Container &container)
 {
   return std::sort_heap(container.begin(), container.end());
 }
+
+// binary_search
+template < typename Container, typename T>
+auto binary_search (Container &container, const T&value)
+{
+  return std::binary_search(container.begin(), container.end(), value);
+}
