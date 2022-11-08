@@ -442,3 +442,31 @@ auto nth_element (T &container, const U &nth_element, const P &predicate)
   return std::nth_element(container.begin(), nth_element, container.end(),
                           predicate);
 }
+
+// make_heap
+template < typename Container>
+auto make_heap (Container &container)
+{
+  return std::make_heap(container.begin(), container.end());
+}
+
+// pop_heap
+template < typename Container>
+auto pop_heap (Container &container)
+{
+  return std::pop_heap(container.begin(), container.end());
+}
+
+// push_heap
+template < typename Container>
+auto push_heap (Container &container)
+{
+  return std::push_heap(container.begin(), container.end());
+}
+
+// sort_heap
+template < typename Container>
+auto sort_heap (Container &container)
+{
+  return std::sort_heap(container.begin(), container.end());
+}
