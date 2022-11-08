@@ -485,3 +485,17 @@ auto includes (const Container1 &container1, const Container2 &container2)
   return std::includes(container1.cbegin(), container1.cend(),
                        container2.cbegin(), container2.cend());
 }
+
+// lower_bound
+template < typename Container, typename T>
+auto lower_bound (const Container &container, const T&value)
+{
+  return std::lower_bound(container.cbegin(), container.cend(), value);
+}
+
+// upper_bound
+template < typename Container, typename T>
+auto upper_bound (const Container &container, const T&value)
+{
+  return std::upper_bound(container.cbegin(), container.cend(), value);
+}
