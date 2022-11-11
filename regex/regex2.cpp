@@ -13,7 +13,7 @@ int main ()
   cout << "data:                   " << data << endl;
 
   smatch match;
-  bool found { regex_search(data, match, regex("<(.*)>(.*)</\\1>")) };
+  bool found { regex_search(data, match, regex("<(.*)>(.*)</(\\1)>")) };
 
   cout << "match.empty():          " << boolalpha << match.empty() << endl;
   cout << "match.size():           " << match.size() << endl;
