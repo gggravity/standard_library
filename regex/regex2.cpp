@@ -9,7 +9,7 @@ void out (bool b)
 
 int main ()
 {
-  string data { "XML tag: <tag-name>the value</tag-name>" };
+  string data { "XML tag: <tag-name>the value</tag-name>." };
   cout << "data:                   " << data << endl;
 
   smatch match;
