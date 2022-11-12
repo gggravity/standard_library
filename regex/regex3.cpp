@@ -9,7 +9,7 @@ int main ()
                 " <last>Josuttis</last>\n"
                 "</person>" };
 
-  regex reg("<(.*)>(.*)</\\1>");
+  regex reg("<(.*)>(.*)</(\\1)>");
 
   auto pos { data.cbegin() };
   auto end { data.cend() };
