@@ -5,7 +5,7 @@ using namespace chrono;
 
 int main ()
 {
-  static istringstream iss { "20:20" };
+  istringstream iss { "20:20" };
 
   auto now { system_clock::now() };
   auto t { system_clock::to_time_t(now) };
@@ -13,7 +13,7 @@ int main ()
 
   cout << put_time(now_time, "date: %x\ntime: %X\n");
 
-  tm time(*now_time);
+  auto time(*now_time);
   cout << "new time [HH:MM]: ";
   iss >> get_time(&time, "%H:%M");
 
