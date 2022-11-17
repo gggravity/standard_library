@@ -41,5 +41,4 @@ int main ()
 {
   write_charset_to_file("charset.out");
   output_file("charset.out");
-
 }
