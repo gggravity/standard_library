@@ -31,9 +31,9 @@ int main ()
             }
           return EXIT_FAILURE;
         }
-//      locale cin_locale(s);
-//      cin.imbue(cin_locale);
 
+      locale cin_locale(s);
+      cin.imbue(cin_locale);
       cout << (is_german ? "Gleitkommawerte: "
                          : "Floating-point values: ") << endl;
       double value;
