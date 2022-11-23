@@ -66,5 +66,4 @@ int main ()
       cerr << "Exception: " << e.what() << endl;
       return EXIT_FAILURE;
     }
-
 }
