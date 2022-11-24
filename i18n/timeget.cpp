@@ -7,11 +7,13 @@ int main ()
 {
   try
     {
-      locale loc_G { "de_DE.ISO-8859-1" };
-      const auto &tg_G { use_facet<time_get<char>>(loc_G) };
+      auto loc_G = locale("de_DE.utf8");
+      const auto &tg_G = use_facet<time_get<char>>(loc_G);
+
+      cout << loc_G.name() << '\n';
 
       typedef time_base TB;
-      time_get<char>::dateorder d { tg_G.date_order() };
+      time_get<char>::dateorder d = tg_G.date_order();
 
       cout << "dateorder: "
            << (d == TB::no_order ? "on order" :
