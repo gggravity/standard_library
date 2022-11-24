@@ -6,7 +6,7 @@ project(standard_libery)
 #set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -stdlib=libc++ -v")
 #set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -stdlib=libc++ -lc++abi")
 
-set(CMAKE_CXX_STANDARD 23)
+set(CMAKE_CXX_STANDARD 11)
 
 add_executable(lambda1 lang/lambda1.cpp)
 add_executable(exception_test exception_test.cpp)
@@ -234,3 +234,4 @@ add_executable(moneymanipulator i18n/moneymanipulator.cpp)
 add_executable(timeput i18n/timeput.cpp)
 add_executable(timeget i18n/timeget.cpp)
 add_executable(wstring2string i18n/wstring2string.cpp)
+add_executable(wstring2utf8 i18n/wstring2utf8.cpp)
