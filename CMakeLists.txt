@@ -6,7 +6,7 @@ project(standard_libery)
 #set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -stdlib=libc++ -v")
 #set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -stdlib=libc++ -lc++abi")
 
-set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD 17)
 
 add_executable(lambda1 lang/lambda1.cpp)
 add_executable(exception_test exception_test.cpp)
@@ -237,3 +237,4 @@ add_executable(wstring2string i18n/wstring2string.cpp)
 add_executable(wstring2utf8 i18n/wstring2utf8.cpp)
 add_executable(random1 num/random1.cpp)
 add_executable(random2 num/random2.cpp)
+add_executable(dist1 num/dist1.cpp)
