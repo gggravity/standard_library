@@ -33,5 +33,4 @@ int main ()
 
       cin.ignore(numeric_limits<int>::max(), '\n');
     }
-
 }
