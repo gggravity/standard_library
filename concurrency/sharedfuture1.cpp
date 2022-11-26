@@ -16,7 +16,7 @@ int query_number ()
   return number;
 }
 
-void do_something (char c, const shared_future<int>& function)
+void do_something (char c, const shared_future<int> &function)
 {
   try
     {
@@ -40,9 +40,9 @@ int main ()
     {
       shared_future<int> f { async(query_number) };
 
-      auto f1 { async(launch::async, do_something, '.', f)};
-      auto f2 { async(launch::async, do_something, '+', f)};
-      auto f3 { async(launch::async, do_something, '*', f)};
+      auto f1 { async(launch::async, do_something, '.', ref(f)) };
+      auto f2 { async(launch::async, do_something, '+', ref(f)) };
+      auto f3 { async(launch::async, do_something, '*', ref(f)) };
 
       f1.get();
       f2.get();
@@ -52,5 +52,5 @@ int main ()
     {
       cerr << "\nEXCEPTION: " << e.what() << endl;
     }
-    cout << "\ndone" << endl;
+  cout << "\ndone" << endl;
 }
