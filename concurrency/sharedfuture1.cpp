@@ -30,7 +30,7 @@ void do_something (char c, const shared_future<int>& function)
     }
   catch (const exception &e)
     {
-      cerr << "EXCEPTION: " << e.what() << endl;
+      cerr << "EXCEPTION in thread " << this_thread::get_id() << ": " << e.what() << endl;
     }
 }
 
