@@ -11,8 +11,8 @@ int do_something (char c)
   for (int i { 0 } ; i < 10 ; ++i)
     {
       this_thread::sleep_for(milliseconds(id(dre)));
+      cout.put(c).flush();
     }
-  cout.put(c).flush();
 }
 
 int func1 ()
