@@ -13,6 +13,7 @@ int do_something (char c)
       this_thread::sleep_for(milliseconds(id(dre)));
       cout.put(c).flush();
     }
+  return c;
 }
 
 int func1 ()
